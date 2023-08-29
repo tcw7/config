@@ -12,21 +12,21 @@ set cursorline
 syntax enable
 
 " save undo data in relative directory
-" if !isdirectory("./.vim")
-"     call mkdir("./.vim", "", 0777)
-" endif
-" if !isdirectory("./.vim/undo")
-"     call mkdir("./.vim/undo", "", 0777)
-" endif
-" set undodir=./.vim/undo
-" set undofile
+if !isdirectory("./.vim")
+    call mkdir("./.vim", "", 0777)
+endif
+if !isdirectory("./.vim/undo")
+    call mkdir("./.vim/undo", "", 0777)
+endif
+set undodir=./.vim/undo
+set undofile
 
 " backup files location
-" set backup
-" if !isdirectory("./.vim/backups")
-"     call mkdir("./.vim/backups", "", 0777)
-" endif
-" set backupdir=./.vim/backups
+set backup
+if !isdirectory("./.vim/backups")
+    call mkdir("./.vim/backups", "", 0777)
+endif
+set backupdir=./.vim/backups
 
 " ========================== VIMPLUG ==========================
 " Vim-Plug plugin manager
